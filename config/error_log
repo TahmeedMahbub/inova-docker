@@ -1,0 +1,40 @@
+[12-May-2022 04:20:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/ontiknet/public_html/accounts/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/filesystems.php on line 48
+[12-May-2022 16:32:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ontiknet/public_html/accounts/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/mail.php on line 19
+[12-May-2022 23:37:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ontiknet/public_html/accounts/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/queue.php on line 18
+[13-May-2022 21:39:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ontiknet/public_html/accounts/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/broadcasting.php on line 18
+[14-May-2022 11:49:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/ontiknet/public_html/accounts/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/filesystems.php on line 48
+[18-May-2022 04:11:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ontiknet/public_html/accounts/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/database.php on line 29
+[21-May-2022 03:59:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ontiknet/public_html/accounts/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/broadcasting.php on line 18
+[22-May-2022 10:20:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/ontiknet/public_html/accounts/config/dompdf.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/dompdf.php on line 41
+[22-May-2022 19:56:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/ontiknet/public_html/accounts/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/database.php on line 29
+[24-May-2022 03:32:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/ontiknet/public_html/accounts/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/config/filesystems.php on line 48

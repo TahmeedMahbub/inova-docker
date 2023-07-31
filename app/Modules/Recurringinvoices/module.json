@@ -1,0 +1,6 @@
+{
+    "name": "Recurringinvoices",
+    "slug": "recurringinvoices",
+    "version": "1.0",
+    "description": "this is recurring invoice that mean it can auto create in voice after a time interval"
+}

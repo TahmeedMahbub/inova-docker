@@ -1,0 +1,223 @@
+body {
+	overflow-y: auto !;
+}
+body a {
+	text-decoration: none !important;
+}
+.offcanvas-end {
+	width: 35rem !important;
+}
+.min-width {
+	min-width: 100%;
+}
+.cost-width {
+	width: 10rem !important;
+}
+.img-sizing {
+	width: 50%;
+}
+@media (min-width: 768px) {
+	.img-sizing {
+		width: 100%;
+	}
+}
+
+.modal {
+	position: absolute;
+	top: 30px !important;
+	/* right: 0 !important; */
+	left: 0px !important;
+	z-index: 2;
+	overflow: auto;
+	overflow-y: auto;
+}
+.modal-dialog {
+	max-width: 470px !important;
+}
+
+.modal.fade {
+	opacity: 1 !important;
+}
+
+.swal2-container{
+	z-index: 999999 !important;
+}
+
+#costlist input[type="text"]::placeholder {
+	/* Firefox, Chrome, Opera */
+	text-align: right;
+}
+
+#costlist{
+	width: 30vw !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 32px !important;
+    border-top: 1px solid #ccc;
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
+.qtn-box {
+	width: 4rem !important;
+}
+
+.btn-border {
+	border: 2px solid rgb(212, 212, 212);
+}
+.clicked {
+	background-color: rgb(255, 255, 255) !important;
+	color: #6b93d3 !important;
+	font-style: bold !important;
+	border: 2px solid #739fe5 !important;
+	border-radius: 3px !important;
+}
+.scroller {
+	/* width: 300px; */
+	border: 0ch;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 40vh;
+	/* -ms-overflow-x-style: none; IE and Edge */
+	/* scrollbar-width: none; */
+
+	/* scrollbar-color: rebeccapurple green; */
+	/* scrollbar-width: thin; */
+}
+.scroller::-webkit-scrollbar-x {
+	/* display: none; */
+}
+
+.sidescroll {
+	overflow-x: scroll;
+}
+
+.bg-white {
+	background-color: #ffffff;
+}
+
+.active {
+	background-color: rgb(209, 209, 209);
+}
+
+.products-list {
+	display: flex;
+}
+
+.marginbox {
+	margin: 10px !important;
+	width: 30% !important;
+}
+
+.products-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;
+}
+
+.md-card {
+	margin: 10px;
+}
+
+.fixed-width {
+	width: 250px !important;
+}
+
+.cartflex {
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
+	width: 100%;
+}
+
+.products-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	padding: 10px;
+	margin: 10px;
+}
+
+.product-flex {
+	width: 100% !important;
+	grid-template-columns: 150px 100px 4fr 4fr;
+	/* margin-top: 10px; */
+}
+
+.bg {
+	background-color: rgb(243, 243, 243) !important;
+}
+.cardqtn {
+	color: aqua;
+}
+.md-card {
+	margin: 10px !important;
+}
+
+.btn-row {
+	margin: 10px;
+}
+
+.sticky {
+	position: -webkit-sticky !important;
+	position: sticky !important;
+}
+
+#page_content_inner {
+	padding: 1px 24px 100px;
+}
+
+.vl {
+	border-left: 2px solid rgb(202, 202, 202);
+	height: auto;
+}
+
+/* Animated checkmark */
+.checkmark__circle {
+	stroke-dasharray: 166;
+	stroke-dashoffset: 166;
+	stroke-width: 2;
+	stroke-miterlimit: 10;
+	stroke: #7ac142;
+	fill: none;
+	animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+	width: 30px;
+	border-radius: 50%;
+	display: block;
+	stroke-width: 2;
+	stroke: #fff;
+	stroke-miterlimit: 10;
+	margin-right: 10px;
+	box-shadow: inset 0px 0px 0px #7ac142;
+	animation: fill 0.4s ease-in-out 0.4s forwards,
+		scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+	transform-origin: 50% 50%;
+	stroke-dasharray: 48;
+	stroke-dashoffset: 48;
+	animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes scale {
+	0%,
+	100% {
+		transform: none;
+	}
+	50% {
+		transform: scale3d(1.1, 1.1, 1);
+	}
+}
+@keyframes fill {
+	100% {
+		box-shadow: inset 0px 0px 0px 30px #7ac142;
+	}
+}

@@ -1,0 +1,5 @@
+[11-May-2022 10:30:16 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Manualjournal/Providers/RouteServiceProvider.php on line 8
+[11-May-2022 12:53:01 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Manualjournal/Providers/RouteServiceProvider.php on line 8
+[13-May-2022 19:10:52 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Manualjournal/Providers/ModuleServiceProvider.php on line 7
+[13-May-2022 21:14:58 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Manualjournal/Providers/ModuleServiceProvider.php on line 7
+[17-May-2022 13:29:54 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Manualjournal/Providers/RouteServiceProvider.php on line 8

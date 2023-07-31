@@ -1,0 +1,1 @@
+[16-May-2022 17:39:35 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/ChartOfAccount/ChartOfAccount.php on line 7

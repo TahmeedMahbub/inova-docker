@@ -1,0 +1,15 @@
+[11-May-2022 10:04:43 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\AuthServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/AuthServiceProvider.php on line 8
+[11-May-2022 13:53:07 UTC] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/ArrayFlattenServiceProvider.php on line 7
+[12-May-2022 14:00:36 UTC] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/ArrayFlattenServiceProvider.php on line 7
+[12-May-2022 23:48:10 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/EventServiceProvider.php on line 8
+[13-May-2022 01:51:14 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/RouteServiceProvider.php on line 8
+[15-May-2022 04:06:57 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\AuthServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/AuthServiceProvider.php on line 8
+[17-May-2022 01:06:00 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/EventServiceProvider.php on line 8
+[20-May-2022 00:03:23 UTC] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/BroadcastServiceProvider.php on line 8
+[20-May-2022 02:35:25 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/RouteServiceProvider.php on line 8
+[23-May-2022 21:42:01 UTC] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/BroadcastServiceProvider.php on line 8
+[23-May-2022 23:53:53 UTC] PHP Fatal error:  Class 'Illuminate\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/BroadcastServiceProvider.php on line 8
+[24-May-2022 22:35:27 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/EventServiceProvider.php on line 8
+[25-May-2022 01:27:02 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\EventServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/EventServiceProvider.php on line 8
+[25-May-2022 06:42:58 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/RouteServiceProvider.php on line 8
+[25-May-2022 09:18:43 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Providers/RouteServiceProvider.php on line 8

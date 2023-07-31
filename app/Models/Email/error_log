@@ -1,0 +1,2 @@
+[14-May-2022 07:12:19 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Email/Email.php on line 7
+[16-May-2022 16:17:25 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Email/Email.php on line 7

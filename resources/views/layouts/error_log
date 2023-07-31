@@ -1,0 +1,4 @@
+[26-May-2022 13:26:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/ontiknet/public_html/accounts/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/resources/views/layouts/app.blade.php on line 19

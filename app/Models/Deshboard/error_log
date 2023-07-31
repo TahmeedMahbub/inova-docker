@@ -1,0 +1,2 @@
+[14-May-2022 06:49:27 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Deshboard/Reminder.php on line 7
+[16-May-2022 19:16:53 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Deshboard/Reminder.php on line 7

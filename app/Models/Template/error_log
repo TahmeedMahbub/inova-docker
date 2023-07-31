@@ -1,0 +1,2 @@
+[14-May-2022 07:28:33 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Template/HeaderTemplate.php on line 7
+[16-May-2022 16:17:30 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Template/HeaderTemplate.php on line 7

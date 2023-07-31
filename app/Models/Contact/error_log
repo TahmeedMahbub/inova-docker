@@ -1,0 +1,12 @@
+[15-May-2022 10:51:30 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Agent.php on line 7
+[15-May-2022 10:51:30 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Contact.php on line 7
+[15-May-2022 10:51:31 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/ContactCategory.php on line 7
+[15-May-2022 10:51:31 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/ContactZones.php on line 7
+[15-May-2022 10:51:32 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Customer_file.php on line 7
+[15-May-2022 10:51:32 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Subreference.php on line 7
+[18-May-2022 04:47:51 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Agent.php on line 7
+[18-May-2022 04:47:52 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Contact.php on line 7
+[18-May-2022 04:47:52 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/ContactCategory.php on line 7
+[18-May-2022 04:47:53 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/ContactZones.php on line 7
+[18-May-2022 04:47:53 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Customer_file.php on line 7
+[18-May-2022 04:47:54 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Contact/Subreference.php on line 7

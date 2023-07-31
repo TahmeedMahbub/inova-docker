@@ -1,0 +1,1 @@
+[21-May-2022 12:29:36 UTC] PHP Fatal error:  Class 'Illuminate\Notifications\Notification' not found in /home/ontiknet/public_html/accounts/app/Notifications/ConfirmEmail.php on line 10

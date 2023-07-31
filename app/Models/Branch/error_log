@@ -1,0 +1,3 @@
+[12-May-2022 19:49:46 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Branch/Branch.php on line 7
+[14-May-2022 06:37:21 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Branch/Branch.php on line 7
+[16-May-2022 16:17:07 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Branch/Branch.php on line 7

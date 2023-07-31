@@ -1,0 +1,2 @@
+[11-May-2022 08:24:25 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Pos/Providers/RouteServiceProvider.php on line 8
+[25-May-2022 06:08:01 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Pos/Providers/RouteServiceProvider.php on line 8

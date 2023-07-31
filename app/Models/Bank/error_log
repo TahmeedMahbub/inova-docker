@@ -1,0 +1,4 @@
+[14-May-2022 11:05:01 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Bank/Bank.php on line 7
+[14-May-2022 11:05:02 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Bank/BankName.php on line 7
+[17-May-2022 12:35:28 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Bank/Bank.php on line 7
+[17-May-2022 12:36:58 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/ontiknet/public_html/accounts/app/Models/Bank/BankName.php on line 7

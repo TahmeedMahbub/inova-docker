@@ -1,0 +1,302 @@
+{
+    "Accountchart": {
+        "basename": "Accountchart",
+        "name": "Accountchart",
+        "slug": "accountchart",
+        "version": "1.0",
+        "description": "This is the description for the Accountchart module.",
+        "id": 887152027,
+        "enabled": true,
+        "order": 9001
+    },
+    "Attributes": {
+        "basename": "Attributes",
+        "name": "Attributes",
+        "slug": "attributes",
+        "version": "1.0",
+        "description": "This is the description for the Attributes module.",
+        "id": 832282224,
+        "enabled": true,
+        "order": 9001
+    },
+    "Bank": {
+        "basename": "Bank",
+        "name": "Bank",
+        "slug": "bank",
+        "version": "1.0",
+        "description": "This is the description for the Bank module.",
+        "id": 3630219130,
+        "enabled": true,
+        "order": 9001
+    },
+    "Bill": {
+        "basename": "Bill",
+        "name": "Bill",
+        "slug": "bill",
+        "version": "1.0",
+        "description": "This is the description for the Bill module.",
+        "id": 2048989667,
+        "enabled": true,
+        "order": 9001
+    },
+    "Billsubmit": {
+        "basename": "Billsubmit",
+        "name": "Billsubmit",
+        "slug": "billsubmit",
+        "version": "1.0",
+        "description": "yes",
+        "id": 2214136385,
+        "enabled": true,
+        "order": 9001
+    },
+    "Commission": {
+        "basename": "Commission",
+        "name": "Commission",
+        "slug": "commission",
+        "version": "1.0",
+        "description": "This is the description for the Commission module.",
+        "id": 476381528,
+        "enabled": true,
+        "order": 9001
+    },
+    "Contact": {
+        "basename": "Contact",
+        "name": "Contact",
+        "slug": "contact",
+        "version": "1.0",
+        "description": "This is the description for the Contact module.",
+        "id": 1281549880,
+        "enabled": true,
+        "order": 9001
+    },
+    "Creditnote": {
+        "basename": "Creditnote",
+        "name": "Creditnote",
+        "slug": "creditnote",
+        "version": "1.0",
+        "description": "This is the description for the Creditnote module.",
+        "id": 766363626,
+        "enabled": true,
+        "order": 9001
+    },
+    "Dashboard": {
+        "basename": "Dashboard",
+        "name": "Dashboard",
+        "slug": "dashboard",
+        "version": "1.0",
+        "description": "This is the description for the Dashboard module.",
+        "id": 1553268728,
+        "enabled": true,
+        "order": 9001
+    },
+    "Email": {
+        "basename": "Email",
+        "name": "Email",
+        "slug": "email",
+        "version": "1.0",
+        "description": "This is the description for the Email module.",
+        "id": 3885137012,
+        "enabled": true,
+        "order": 9001
+    },
+    "Estimate": {
+        "basename": "Estimate",
+        "name": "Estimate",
+        "slug": "estimate",
+        "version": "1.0",
+        "description": "This is the description for the Estimate module.",
+        "id": 3538568711,
+        "enabled": true,
+        "order": 9001
+    },
+    "Expense": {
+        "basename": "Expense",
+        "name": "Expense",
+        "slug": "expense",
+        "version": "1.0",
+        "description": "This is the description for the Expense module.",
+        "id": 758812070,
+        "enabled": true,
+        "order": 9001
+    },
+    "Income": {
+        "basename": "Income",
+        "name": "Income",
+        "slug": "income",
+        "version": "1.0",
+        "description": "This is the description for the Income module.",
+        "id": 1067999952,
+        "enabled": true,
+        "order": 9001
+    },
+    "Inventory": {
+        "basename": "Inventory",
+        "name": "Inventory",
+        "slug": "inventory",
+        "version": "1.0",
+        "description": "This is the description for the Inventory module.",
+        "id": 2972535350,
+        "enabled": true,
+        "order": 9001
+    },
+    "Invoice": {
+        "basename": "Invoice",
+        "name": "Invoice",
+        "slug": "invoice",
+        "version": "1.0",
+        "description": "This is the description for the Invoice module.",
+        "id": 2422544196,
+        "enabled": true,
+        "order": 9001
+    },
+    "Manualjournal": {
+        "basename": "Manualjournal",
+        "name": "Manualjournal",
+        "slug": "manualjournal",
+        "version": "1.0",
+        "description": "This is the description for the Manualjournal module.",
+        "id": 1997092615,
+        "enabled": true,
+        "order": 9001
+    },
+    "Offer": {
+        "basename": "Offer",
+        "name": "Offer",
+        "slug": "offer",
+        "version": "1.0",
+        "description": "This is the description for the Offer module.",
+        "id": 701925182,
+        "order": 9001,
+        "enabled": true
+    },
+    "Paymentmade": {
+        "basename": "Paymentmade",
+        "name": "Paymentmade",
+        "slug": "paymentmade",
+        "version": "1.0",
+        "description": "This is the description for the Paymentmade module.",
+        "id": 3881611887,
+        "enabled": true,
+        "order": 9001
+    },
+    "Paymentreceive": {
+        "basename": "Paymentreceive",
+        "name": "Paymentreceive",
+        "slug": "paymentreceive",
+        "version": "1.0",
+        "description": "This is the description for the Paymentreceive module.",
+        "id": 3011005732,
+        "enabled": true,
+        "order": 9001
+    },
+    "Pointofsales": {
+        "basename": "Pointofsales",
+        "name": "Pointofsales",
+        "slug": "pointofsales",
+        "version": "1.0",
+        "description": "This is the description for the Pointofsales module.",
+        "id": 51026065,
+        "enabled": true,
+        "order": 9001
+    },
+    "Pos": {
+        "basename": "Pos",
+        "name": "Pos",
+        "slug": "pos",
+        "version": "1.0",
+        "description": "This is the description for the Pos module.",
+        "id": 2161764012,
+        "enabled": true,
+        "order": 9001
+    },
+    "Producttrack": {
+        "basename": "Producttrack",
+        "name": "Producttrack",
+        "slug": "producttrack",
+        "version": "1.0",
+        "description": "This is the description for the Producttrack module.",
+        "id": 103721500,
+        "enabled": true,
+        "order": 9001
+    },
+    "Recurringbill": {
+        "basename": "Recurringbill",
+        "name": "recurringBill",
+        "slug": "recurringbill",
+        "version": "1.0",
+        "description": "This module use for recurring bill that mean it use only makeThis is the description for the Recurringbill module.",
+        "id": 3506199984,
+        "enabled": true,
+        "order": 9001
+    },
+    "Recurringinvoices": {
+        "basename": "Recurringinvoices",
+        "name": "Recurringinvoices",
+        "slug": "recurringinvoices",
+        "version": "1.0",
+        "description": "this is recurring invoice that mean it can auto create in voice after a time interval",
+        "id": 3331414881,
+        "enabled": true,
+        "order": 9001
+    },
+    "Report": {
+        "basename": "Report",
+        "name": "Report",
+        "slug": "report",
+        "version": "1.0",
+        "description": "This is the description for the Report module.",
+        "id": 3291445124,
+        "enabled": true,
+        "order": 9001
+    },
+    "Retainerinvoice": {
+        "basename": "Retainerinvoice",
+        "name": "Retainerinvoice",
+        "slug": "retainerinvoice",
+        "version": "1.0",
+        "description": "This is the description for the Retainerinvoice module.",
+        "id": 2851256745,
+        "enabled": true,
+        "order": 9001
+    },
+    "Serialentry": {
+        "basename": "Serialentry",
+        "name": "Serialenty",
+        "slug": "serialentry",
+        "version": "1.0",
+        "description": "serial entry table",
+        "id": 2509043956,
+        "enabled": true,
+        "order": 9001
+    },
+    "Settings": {
+        "basename": "Settings",
+        "name": "Settings",
+        "slug": "settings",
+        "version": "1.0",
+        "description": "This is the description for the Settings module.",
+        "id": 3846545605,
+        "enabled": true,
+        "order": 9001
+    },
+    "Stockmanagement": {
+        "basename": "Stockmanagement",
+        "name": "Stockmanagement",
+        "slug": "stockmanagement",
+        "version": "1.0",
+        "description": "This is the description for the Stockmanagement module.",
+        "id": 3729773242,
+        "enabled": true,
+        "order": 9001
+    },
+    "Vendorcredit": {
+        "basename": "Vendorcredit",
+        "name": "Vendorcredit",
+        "slug": "vendorcredit",
+        "version": "1.0",
+        "description": "This is the description for the Vendorcredit module.",
+        "id": 2160033826,
+        "enabled": true,
+        "order": 9001
+    }
+}

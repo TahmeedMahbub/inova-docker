@@ -1,0 +1,7 @@
+[11-May-2022 23:34:13 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/ModuleServiceProvider.php on line 7
+[13-May-2022 18:25:24 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/RouteServiceProvider.php on line 8
+[13-May-2022 20:36:38 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Support\Providers\RouteServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/RouteServiceProvider.php on line 8
+[14-May-2022 17:49:14 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/ModuleServiceProvider.php on line 7
+[14-May-2022 20:10:38 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/ModuleServiceProvider.php on line 7
+[20-May-2022 00:39:27 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/ModuleServiceProvider.php on line 7
+[26-May-2022 23:16:44 UTC] PHP Fatal error:  Class 'Caffeinated\Modules\Support\ServiceProvider' not found in /home/ontiknet/public_html/accounts/app/Modules/Stockmanagement/Providers/ModuleServiceProvider.php on line 7

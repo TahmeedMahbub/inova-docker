@@ -1,0 +1,95 @@
+Backup 
+
+Dockerfile
+==================================
+FROM php:7.4.33 as php
+
+RUN apt-get update -y
+RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev
+RUN docker-php-ext-install pdo pdo_mysql bcmath
+
+RUN pecl install -o -f redis \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable redis
+
+WORKDIR /var/www
+COPY . .
+
+COPY --from=composer:2.3.5 /usr/bin/composer /usr/bin/composer
+
+ENV PORT=8010
+ENTRYPOINT [ "Docker/entrypoint.sh" ]
+
+entrypoint
+==================================
+#!/bin/bash
+
+if [ ! -f "vendor/autoload.php" ]; then
+    composer install --no-progress --no-interaction
+fi
+
+if [ ! -f ".env" ]; then
+    echo "Creating env file for env $APP_ENV"
+    cp .env.example .env
+else
+    echo "env exists!"
+fi
+
+php artisan key:generate
+php artisan route:clear
+php artisan view:clear
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
+
+php artisan serve --port=$PORT --host=0.0.0.0 --env=.env
+exec docker-php-entrypoint "$@"
+
+
+docker-compose
+==========================
+version: "3.8"
+services:
+
+  # PHP SERVICE
+  php:
+    build:
+      context: .
+      target: php
+      args:
+        - APP_ENV=${APP_ENV}
+    environment:
+      - APP_ENV=${APP_ENV}
+      - CONTAINER_ROLE=app
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    ports:
+      - 8010:8010
+    depends_on:
+      - db
+      - redis
+
+  # Database Server
+  db:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/MYSQL_DATABASE
+
+  # Redis Server
+  redis:
+    image: redis:alpine
+    command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
+    ports:
+      - 6379:6379
+
+
+volumes:
+  db-data: ~

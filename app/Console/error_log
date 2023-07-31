@@ -1,0 +1,1 @@
+[11-May-2022 10:07:44 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Console\Kernel' not found in /home/ontiknet/public_html/accounts/app/Console/Kernel.php on line 10

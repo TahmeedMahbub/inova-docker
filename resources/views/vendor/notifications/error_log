@@ -1,0 +1,4 @@
+[27-May-2022 04:11:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function config() in /home/ontiknet/public_html/accounts/resources/views/vendor/notifications/email-plain.blade.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/ontiknet/public_html/accounts/resources/views/vendor/notifications/email-plain.blade.php on line 22

@@ -1,0 +1,24 @@
+==========INOVA QC==========
+27-03-2023:
+Contact Create:
+Category Req
+Contact Code Req
+
+Contact Edit:
+Shipping Address input (wrong value shown)
+
+Contact Category Create:
+Req mark(*) added
+
+Contact Category Create:
+Req mark(*) added
+
+Inventory Create
+unit dropdown
+product variation removed
+
+Inventory Edit
+unit dropdown
+product variation removed
+attribute show when no value given
+!!! Barcode Change
