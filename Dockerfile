@@ -1,51 +1,17 @@
-FROM php:7.4-apache
+FROM php:7.4.33 as php
 
-# 1. Install development packages and clean up apt cache.
-RUN apt-get update && apt-get install -y \
-    curl \
-    g++ \
-    git \
-    libz-dev \
-    libzip-dev \
-    libbz2-dev \
-    libfreetype6-dev \
-    libicu-dev \
-    libjpeg-dev \
-    libmcrypt-dev \
-    libpng-dev \
-    libreadline-dev \
-    sudo \
-    unzip \
-    zip \
- && rm -rf /var/lib/apt/lists/*
+RUN apt-get update -y
+RUN apt-get install -y libzip-dev zip unzip libpq-dev libcurl4-gnutls-dev zlib1g-dev libpng-dev
+RUN docker-php-ext-install pdo pdo_mysql bcmath gd
 
-# 2. Apache configs + document root.
-RUN echo "ServerName laravel-app.local" >> /etc/apache2/apache2.conf
+RUN pecl install -o -f redis zip \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable redis zip
 
-ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+WORKDIR /var/www
+COPY . .
 
-# 3. mod_rewrite for URL rewrite and mod_headers for .htaccess extra headers like Access-Control-Allow-Origin-
-RUN a2enmod rewrite headers
+COPY --from=composer:2.3.5 /usr/bin/composer /usr/bin/composer
 
-RUN docker-php-ext-install \
-    pdo_mysql \
-    gd
-
-RUN pecl install zip
-
-# RUN pecl install redis zip \
-#     docker-php-ext-enable redis zip
-
-RUN docker-php-ext-enable pdo_mysql gd zip
-
-
-# 5. Composer.
-COPY --from=composer:latest /usr/bin/composer /usr/bin/Composer
-# RUN composer install
-
-RUN chown -R www-data:www-data /var/www/html
-
-# 4. Start with base PHP config, then add extensions.
-# RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+ENV PORT=8010
+ENTRYPOINT [ "Docker/entrypoint.sh" ]

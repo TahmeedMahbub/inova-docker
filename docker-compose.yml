@@ -1,37 +1,55 @@
 version: "3.8"
 services:
-    web-server:
-        container_name: php-apache
-        build:
-            context: ./
-            dockerfile: Dockerfile
-        # depends_on:
-        #     - db
-        image: php:7.4-apache
-        restart: always
-        volumes:
-            - ./:/var/www/html/
+
+  # PHP SERVICE
+  php:
+    build:
+      context: .
+      target: php
+      args:
+        - APP_ENV=${APP_ENV}
+    environment:
+      - APP_ENV=${APP_ENV}
+      - CONTAINER_ROLE=app
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    ports:
+      - 8010:8010
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - .env
+
+  # Database Server
+  db:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/mysql
+
+  # Redis Server
+  redis:
+    image: redis:alpine
+    command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
+    ports:
+      - 6379:6379
+
+  phpmyadmin:
+        image: phpmyadmin/phpmyadmin
         ports:
-            - 8000:80
+            - "8080:80"
+        restart: always
+        environment:
+            PMA_HOST: db
+        depends_on:
+            - db
 
-    # db:
-    #     container_name: mysql
-    #     image: mysql
-    #     restart: always
-    #     environment:
-    #         MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-    #         MYSQL_DATABASE: ${DB_DATABASE}
-    #         MYSQL_USER: ${DB_USERNAME}
-    #         MYSQL_PASSWORD: ${DB_PASSWORD}
-    #     ports:
-    #         - "3306:3306"
 
-    # phpmyadmin:
-    #     image: phpmyadmin/phpmyadmin
-    #     ports:
-    #         - "8080:80"
-    #     restart: always
-    #     environment:
-    #         PMA_HOST: db
-    #     depends_on:
-    #         - db
+volumes:
+  db-data: ~

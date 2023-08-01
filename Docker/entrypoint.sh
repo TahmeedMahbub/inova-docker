@@ -2,6 +2,8 @@
 
 if [ ! -f "vendor/autoload.php" ]; then
     composer install --no-progress --no-interaction
+else
+    composer update --no-progress --no-interaction
 fi
 
 if [ ! -f ".env" ]; then

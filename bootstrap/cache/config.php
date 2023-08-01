@@ -8,7 +8,7 @@
     'timezone' => 'Asia/Dhaka',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => 'base64:3XHI4ipAJLHazNPCJCQP0eTuFB/hDvoMTgeduCkTKaU=',
+    'key' => 'base64:YEDsWYinfnZ7T0UkrG8uqNyTZX5bGebq56VfhzHnFYY=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -186,7 +186,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\laragon\\www\\inova-docker\\storage\\framework/cache',
+        'path' => '/var/www/storage/framework/cache',
       ),
       'memcached' => 
       array (
@@ -285,10 +285,10 @@
       'mysql' => 
       array (
         'driver' => 'mysql',
-        'host' => '127.0.0.1',
+        'host' => '192.168.68.118',
         'port' => '3306',
         'database' => 'ams_inova',
-        'username' => 'rafid',
+        'username' => 'root',
         'temp_username' => NULL,
         'password' => '1234',
         'charset' => 'utf8',
@@ -296,14 +296,20 @@
         'prefix' => '',
         'strict' => false,
         'engine' => NULL,
+        'modes' => 
+        array (
+          0 => 'NO_ZERO_DATE',
+          1 => 'ERROR_FOR_DIVISION_BY_ZERO',
+          2 => 'NO_ENGINE_SUBSTITUTION',
+        ),
       ),
       'pgsql' => 
       array (
         'driver' => 'pgsql',
-        'host' => '127.0.0.1',
+        'host' => '192.168.68.118',
         'port' => '3306',
         'database' => 'ams_inova',
-        'username' => 'rafid',
+        'username' => 'root',
         'password' => '1234',
         'charset' => 'utf8',
         'prefix' => '',
@@ -330,10 +336,10 @@
     'orientation' => 'portrait',
     'defines' => 
     array (
-      'DOMPDF_FONT_DIR' => 'C:\\laragon\\www\\inova-docker\\storage\\fonts/',
-      'DOMPDF_FONT_CACHE' => 'C:\\laragon\\www\\inova-docker\\storage\\fonts/',
-      'DOMPDF_TEMP_DIR' => 'C:\\Users\\User\\AppData\\Local\\Temp',
-      'DOMPDF_CHROOT' => 'C:\\laragon\\www\\inova-docker',
+      'DOMPDF_FONT_DIR' => '/var/www/storage/fonts/',
+      'DOMPDF_FONT_CACHE' => '/var/www/storage/fonts/',
+      'DOMPDF_TEMP_DIR' => '/tmp',
+      'DOMPDF_CHROOT' => '/var/www',
       'DOMPDF_UNICODE_ENABLED' => true,
       'DOMPDF_ENABLE_FONT_SUBSETTING' => false,
       'DOMPDF_PDF_BACKEND' => 'CPDF',
@@ -449,7 +455,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'C:\\laragon\\www\\inova-docker\\storage\\framework/laravel-excel',
+      'local_path' => '/var/www/storage/framework/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -464,12 +470,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\inova-docker\\storage\\app',
+        'root' => '/var/www/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\inova-docker\\storage\\app/public',
+        'root' => '/var/www/storage/app/public',
         'visibility' => 'public',
       ),
       's3' => 
@@ -492,7 +498,7 @@
       'maxmind_database' => 
       array (
         'class' => 'Torann\\GeoIP\\Services\\MaxMindDatabase',
-        'database_path' => 'C:\\laragon\\www\\inova-docker\\storage\\app/geoip.mmdb',
+        'database_path' => '/var/www/storage/app/geoip.mmdb',
         'update_url' => 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz',
         'locales' => 
         array (
@@ -514,7 +520,7 @@
         'class' => 'Torann\\GeoIP\\Services\\IPApi',
         'secure' => true,
         'key' => NULL,
-        'continent_path' => 'C:\\laragon\\www\\inova-docker\\storage\\app/continents.json',
+        'continent_path' => '/var/www/storage/app/continents.json',
         'lang' => 'en',
       ),
       'ipgeolocation' => 
@@ -522,7 +528,7 @@
         'class' => 'Torann\\GeoIP\\Services\\IPGeoLocation',
         'secure' => true,
         'key' => NULL,
-        'continent_path' => 'C:\\laragon\\www\\inova-docker\\storage\\app/continents.json',
+        'continent_path' => '/var/www/storage/app/continents.json',
         'lang' => 'en',
       ),
       'ipdata' => 
@@ -571,7 +577,7 @@
   ),
   'modules' => 
   array (
-    'path' => 'C:\\laragon\\www\\inova-docker\\app\\Modules',
+    'path' => '/var/www/app/Modules',
     'enabled' => true,
     'namespace' => 'App\\Modules\\',
     'driver' => 'local',
@@ -655,7 +661,7 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\laragon\\www\\inova-docker\\storage\\framework/sessions',
+    'files' => '/var/www/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -701,9 +707,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\laragon\\www\\inova-docker\\resources\\views',
+      0 => '/var/www/resources/views',
     ),
-    'compiled' => 'C:\\laragon\\www\\inova-docker\\storage\\framework\\views',
+    'compiled' => '/var/www/storage/framework/views',
   ),
   'debugbar' => 
   array (
@@ -712,7 +718,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => 'C:\\laragon\\www\\inova-docker\\storage\\debugbar',
+      'path' => '/var/www/storage/debugbar',
       'connection' => NULL,
       'provider' => '',
     ),

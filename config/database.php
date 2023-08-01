@@ -65,6 +65,11 @@ return [
             'prefix' => '',
             'strict' => false,
             'engine' => null,
+            'modes'  => [
+                'NO_ZERO_DATE',
+                'ERROR_FOR_DIVISION_BY_ZERO',
+                'NO_ENGINE_SUBSTITUTION',
+            ],
         ],
 
         'pgsql' => [
