@@ -17,21 +17,9 @@ services:
     ports:
       - 8010:8010
     depends_on:
-      - db
       - redis
     env_file:
       - .env
-
-  # Database Server
-  db:
-    image: mysql
-    ports:
-      - 3306:3306
-    environment:
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
-    volumes:
-      - db-data:/var/lib/mysql
 
   # Redis Server
   redis:
@@ -39,16 +27,6 @@ services:
     command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
     ports:
       - 6379:6379
-
-  phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        ports:
-            - "8080:80"
-        restart: always
-        environment:
-            PMA_HOST: db
-        depends_on:
-            - db
 
 
 volumes:
