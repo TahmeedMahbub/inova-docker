@@ -3,6 +3,7 @@ services:
 
   # PHP SERVICE
   php:
+    restart: always
     build:
       context: .
       target: php
@@ -24,6 +25,7 @@ services:
   # Redis Server
   redis:
     image: redis:alpine
+    restart: always
     command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
     ports:
       - 6379:6379
