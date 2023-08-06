@@ -36,7 +36,7 @@ Route::group(['prefix' => 'bank', 'middleware' => 'auth'], function () {
     Route::post('/report/{id}/{branch_id}', 'HomeController@processfilterForm')->name('bank_report_form')->middleware('read_access');
 });
 
-Route::group(['prefix' => 'cheque-book', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'check-book', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@chequeBook')->name('cheque_book')->middleware('read_access');
     Route::get('/create', 'HomeController@createChequeBook')->name('cheque_book_create')->middleware('create_access');
     Route::post('/store', 'HomeController@storeChequeBook')->name('cheque_book_store')->middleware('create_access');
