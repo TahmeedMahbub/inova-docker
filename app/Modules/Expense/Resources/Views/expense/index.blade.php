@@ -156,6 +156,7 @@
                                         <th>Expense Account</th>
                                         <th>Reference</th>
                                         <th>Vandor Name</th>
+                                        <th>Project</th>
                                         <th>Paid Through</th>
                                         <th>Amount</th>
                                         @if($branch_id == '1')
@@ -172,6 +173,7 @@
                                         <th>Expense Account</th>
                                         <th>Reference</th>
                                         <th>Vandor Name</th>
+                                        <th>Project</th>
                                         <th>Paid Through</th>
                                         <th>Amount</th>
                                         @if($branch_id == '1')
@@ -189,6 +191,7 @@
                                             <td>{{date('d-m-Y', strtotime($expense->date)) }}</td>
                                             <td>{{ $expense->account->account_name }}</td>
                                             <td>{{ $expense->reference }}</td>
+                                            <td>{{ $expense->customer['display_name'] }}</td>
                                             <td>{{ $expense->customer['display_name'] }}</td>
                                             <td>{{ $expense->accountPaidThrough->account_name }}</td>
                                             <td>{{ $expense->amount }}</td>

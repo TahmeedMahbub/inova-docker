@@ -146,6 +146,7 @@
                                         <th>Date</th>
                                         <th>Payment Made Number</th>
                                         <th>Vendor Name</th>
+                                        <th>Project</th>
                                         <th>Amount</th>
                                         <th>Unused Amount</th>
                                         <th class="uk-text-center">Action</th>
@@ -157,6 +158,7 @@
                                         <th>Date</th>
                                         <th>Payment Made Number</th>
                                         <th>Vendor Name</th>
+                                        <th>Project</th>
                                         <th>Amount</th>
                                         <th>Unused Amount</th>
                                         <th class="uk-text-center">Action</th>
@@ -169,6 +171,11 @@
                                             <td id="sortby">{{ date('d-m-Y',strtotime($payment_made->payment_date)) }}</td>
                                             <td>{{ $payment_made->account_id == 3 ? 'CP' : 'BP' }}-{{ \Carbon\Carbon::createFromFormat('Y-m-d', $payment_made->payment_date)->year }}/{{ $payment_made->pm_number }}</td>
                                             <td>{{ $payment_made->customer->display_name }}</td>
+                                            <td>
+                                                @foreach ($payment_made->paymentMadeEntries as $entry)
+                                                    {{$entry->bill ? ($entry->bill->projectContact ? $entry->bill->projectContact->display_name.', ' : '' ) : '' }}
+                                                @endforeach
+                                            </td>
                                             <td>BDT {{ $payment_made->amount }}</td>
                                             <td>BDT {{ $payment_made->excess_amount }}</td>
                                             <td class="uk-text-center">

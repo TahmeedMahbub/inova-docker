@@ -30,6 +30,11 @@ class Bill extends Model
         return $this->belongsTo('App\Models\Contact\Contact', 'vendor_id');
     }
 
+    public function projectContact()
+    {
+        return $this->belongsTo('App\Models\Contact\Contact', 'project_contact_id');
+    }
+
     public function class()
     {
         return $this->belongsTo('App\Models\Inventory\ItemCategory','item_category_id');

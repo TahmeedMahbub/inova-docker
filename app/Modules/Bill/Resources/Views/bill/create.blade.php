@@ -67,7 +67,7 @@
 
                         <div class="uk-margin-top">
                             <div class="uk-grid" data-uk-grid-margin>
-                                <div class="uk-width-medium-1-4">
+                                <div class="uk-width-medium-1-5">
                                     <label class="uk-vertical-align-middle" for="branch_name"> Branch </label> <br>
                                     <select data-uk-tooltip="{pos:'top'}"
                                         class="md-input select2-single-search-dropdown" title="Select Branch"
@@ -78,7 +78,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="uk-width-medium-1-4">
+                                <div class="uk-width-medium-1-5">
                                     <label class="uk-vertical-align-middle" for="vendor_id"> Name <span
                                             class="uk-badge"><a data-toggle="uk-modal"
                                                 data-uk-modal="{target:'#addContact'}" id="contact-modal" type="submit"
@@ -92,13 +92,24 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                <div class="uk-width-medium-1-5">
+                                    <label class="uk-vertical-align-middle" for="project_contact_id"> Project</label> <br>
+                                    <select data-uk-tooltip="{pos:'top'}"
+                                        class="md-input select2-single-search-dropdown" title="Select Project"
+                                        id="project_contact_id" name="project_contact_id">
+                                        <option value="">Select Project</option>
+                                        @foreach($projects as $project)
+                                            <option value="{{ $project->id }}">{{ $project->display_name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
 
-                                <div class="uk-width-medium-1-4">
+                                <div class="uk-width-medium-1-5">
                                     <label for="invoice_number">Order No</label>
                                     <input class="md-input" type="text" id="order_number" name="order_number" />
                                 </div>
 
-                                <div class="uk-width-medium-1-4">
+                                <div class="uk-width-medium-1-5">
                                     <label for="bill_date">Bill Date</label>
                                     <input class="md-input" type="text" id="bill_date" name="bill_date"
                                         value="{{ Carbon\Carbon::now()->format('d-m-Y') }}"

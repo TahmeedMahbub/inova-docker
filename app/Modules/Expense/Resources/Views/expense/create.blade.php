@@ -52,13 +52,13 @@
                             <div class="uk-margin-top">
 
                                 <div class="uk-grid" data-uk-grid-margin>
-                                    <div class="uk-width-medium-1-4">
+                                    <div class="uk-width-medium-1-3">
                                         <label class="uk-vertical-align-middle" for="expense_date">Expense Date</label>
                                         <input class="md-input" type="text" id="expense_date" name="expense_date"
                                             value="{{ Carbon\Carbon::now()->format('d-m-Y') }}"
                                             data-uk-datepicker="{format:'DD-MM-YYYY'}" required>
                                     </div>
-                                    <div class="uk-width-medium-1-4">
+                                    <div class="uk-width-medium-1-3">
                                         <label class="uk-vertical-align-middle" for="customer_name">Expense Account</label>
                                         <br>
                                         <select title="Select Customer" id="account_id" name="account_id"
@@ -69,7 +69,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="uk-width-medium-1-4">
+                                    <div class="uk-width-medium-1-3">
                                         <label class="uk-vertical-align-middle" for="amount">Amount</label>
                                         <input class="md-input" type="text" id="amount" ng-model="amount"
                                             name="amount" ng-keyup="calculateTax()"  oninput="createNote()"/>
@@ -77,7 +77,7 @@
                                             <div class="uk-text-danger">Amount is required.</div>
                                         @endif
                                     </div>
-                                    <div class="uk-width-medium-1-4">
+                                    <div class="uk-width-medium-1-3">
                                         <label class="uk-vertical-align-middle" for="customer_name">Select Tax</label> <br>
                                         <select id="tax_id" class="tax_id select2-single-search-dropdown" name="tax_id"
                                             ng-model="tax_id" ng-change="calculateTax()" required>
@@ -85,9 +85,7 @@
                                         </select>
                                         <!-- Tax Amount = @{{ total_tax | number: 2 }} BDT -->
                                     </div>
-                                </div>
-                                <div class="uk-grid" data-uk-grid-margin>
-                                    <div class="uk-width-medium-1-4">
+                                    <div class="uk-width-medium-1-3">
                                         <label class="uk-vertical-align-middle" for="customer_name">Amount Is</label> <br>
                                         <select id="amount_is" class="amount_is md-input select2-single-search-dropdown"
                                             name="amount_is" ng-model="amount_is" ng-change="calculateTax()" required>
@@ -95,7 +93,23 @@
                                         </select>
                                     </div>
 
-                                    <div class="uk-width-medium-1-4">
+                                    <div class="uk-width-medium-1-3">
+                                        <label class="uk-vertical-align-middle" for="project_id">Project</label> <br>
+                                        <select id="project_id"
+                                            class="project_contact_id md-input select2-single-search-dropdown"
+                                            name="project_contact_id">
+                                            <option value="">Select Project</option>
+                                            @foreach ($projects as $project)
+                                                <option value="{{$project->id}}">{{$project->display_name}}</option>                                                
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="uk-grid" data-uk-grid-margin>
+
+
+                                    <div class="uk-width-medium-1-3">
                                         <label class="uk-vertical-align-middle" for="deposite_to">Paid Through</label> <br>
                                         <select id="paid_through_id"
                                             class="paid_through_id md-input select2-single-search-dropdown"
@@ -104,7 +118,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="uk-width-medium-1-4" id="cheque_number_container" style="display:none;">
+                                    <div class="uk-width-medium-1-3" id="cheque_number_container" style="display:none;">
                                         <label for="cheque_number">Cheque Number</label> <br>
                                         <select name="cheque_number" id="cheque_number" class="md-input select2-single-search-dropdown"  onchange="createNote()">
                                             <option value="">Select a bank first!</option>
@@ -114,7 +128,7 @@
                                         @endif
                                     </div>
 
-                                    <div class="uk-width-medium-1-4" id="issue_date_container" style="display:none;">
+                                    <div class="uk-width-medium-1-3" id="issue_date_container" style="display:none;">
                                         <label for="issue_date">Issue Date</label>
                                         <input class="md-input" type="text" id="issue_date"
                                             name="issue_date" value="{{ old("issue_date") }}" onchange="createNote()" data-uk-datepicker="{format:'DD-MM-YYYY'}"/>

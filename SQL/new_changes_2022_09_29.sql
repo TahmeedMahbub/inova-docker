@@ -730,6 +730,12 @@ ALTER TABLE `invoices` ADD `ecom_id` INT NULL AFTER `invoice_type`;
 
 ALTER TABLE `item` ADD `discount_percentage` FLOAT NULL AFTER `item_about`;
 
+ALTER TABLE `expense` ADD `project_contact_id` INT UNSIGNED NOT NULL AFTER `issue_date`;
+
+ALTER TABLE `expense` CHANGE `project_contact_id` `project_contact_id` INT UNSIGNED NULL DEFAULT NULL;
+
+ALTER TABLE `bill` ADD `project_contact_id` INT UNSIGNED NULL DEFAULT NULL AFTER `item_sub_category_id`;
+
 -------------------------------------------------------
 -- Inova Live DB Upto Date --
 -------------------------------------------------------

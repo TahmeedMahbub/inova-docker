@@ -215,11 +215,11 @@ class BillWebController extends Controller
         $bills                          = Bill::all();
 
         if (count($bills) > 0) {
-            $bill                       = Bill::orderBy('created_at', 'desc')->first();
-            $bill_number                = $bill['bill_number'];
-            $bill_number                = $bill_number + 1;
+            $bill           = Bill::orderBy('created_at', 'desc')->first();
+            $bill_number    = $bill['bill_number'];
+            $bill_number    = $bill_number + 1;
         } else {
-            $bill_number                = 1;
+            $bill_number    = 1;
         }
 
         $bill_number                    = str_pad($bill_number, 6, '0', STR_PAD_LEFT);
@@ -228,9 +228,10 @@ class BillWebController extends Controller
         $attributes                     = Attributes::all();
         $item_variations                = ItemVariation::all();
         $units = Unit::get();
+        $projects                       = Contact::where('contact_category_id', 10)->get();
 
 
-        return view('bill::bill.create', compact('units', 'account', 'vendors', 'bill_number', 'item_category', 'accounts', 'branches', 'attributes', 'item_variations'));
+        return view('bill::bill.create', compact('units', 'account', 'vendors', 'bill_number', 'item_category', 'accounts', 'branches', 'attributes', 'item_variations', 'projects'));
     }
 
     public function store(Request $request)
@@ -370,6 +371,7 @@ class BillWebController extends Controller
             $bill->bill_date                = date("Y-m-d", strtotime($data['bill_date']));
             $bill->adjustment               = $data['adjustment'];
             $bill->adjustment_type          = $data['adjustment_type'];
+            $bill->project_contact_id       = $data['project_contact_id'] ?? null;
             $bill->amount                   = $data['total_amount'];
             $bill->due_amount               = $bill['amount'];
             $bill->note                     = $data['general_note'];
@@ -614,6 +616,7 @@ class BillWebController extends Controller
         $attributes                     = Attributes::all();
         $item_variations                = ItemVariation::all();
         $units = Unit::get();
+        $projects                       = Contact::where('contact_category_id', 10)->get();
 
         if (!$bill) {
             return back()->with('alert.status', 'warning')->with('alert.message', 'Bill not found!');
@@ -625,7 +628,7 @@ class BillWebController extends Controller
             return back();
         }
 
-        return view('bill::bill.edit', compact('units', 'vendors', 'bill', 'item_category', 'account', 'accounts', 'due_balance', 'branches', 'attributes', 'item_variations'));
+        return view('bill::bill.edit', compact('units', 'vendors', 'bill', 'item_category', 'account', 'accounts', 'due_balance', 'branches', 'attributes', 'item_variations', 'projects'));
     }
 
     public function update(Request $request, $id)

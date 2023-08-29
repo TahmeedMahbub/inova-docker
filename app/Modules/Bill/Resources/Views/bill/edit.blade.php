@@ -50,7 +50,7 @@
 
             <div class="uk-margin-top">
                 <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-medium-1-4">
+                    <div class="uk-width-medium-1-5">
                         <label class="uk-vertical-align-middle" for="branch_name"> Branch </label> <br>
                         <select data-uk-tooltip="{pos:'top'}"
                             class="md-input select2-single-search-dropdown" title="Select Branch"
@@ -61,7 +61,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="uk-width-medium-1-4">
+                    <div class="uk-width-medium-1-5">
                         <label class="uk-vertical-align-middle" for="vendor_id"> Name <span
                                 class="uk-badge"><a data-toggle="uk-modal"
                                     data-uk-modal="{target:'#addContact'}" id="contact-modal" type="submit"
@@ -75,13 +75,24 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="uk-width-medium-1-5">
+                        <label class="uk-vertical-align-middle" for="project_contact_id"> Project</label> <br>
+                        <select data-uk-tooltip="{pos:'top'}"
+                            class="md-input select2-single-search-dropdown" title="Select Project"
+                            id="project_contact_id" name="project_contact_id">
+                            <option value="">Select Project</option>
+                            @foreach($projects as $project)
+                                <option value="{{ $project->id }}" {{ $project->id == $bill->project_contact_id ? 'selected' : '' }}>{{ $project->display_name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
-                    <div class="uk-width-medium-1-4">
+                    <div class="uk-width-medium-1-5">
                         <label for="invoice_number">Order No</label>
                         <input class="md-input" type="text" id="order_number" name="order_number" value="{{ $bill->order_number }}"/>
                     </div>
 
-                    <div class="uk-width-medium-1-4">
+                    <div class="uk-width-medium-1-5">
                         <label for="bill_date">Bill Date</label>
                         <input class="md-input" type="text" id="bill_date" name="bill_date"
                             value="{{ date('d-m-Y', strtotime($bill->bill_date)) }}"
@@ -417,7 +428,7 @@
                                     <td> Vat/Tax (%)</td>
                                     <td colspan="4">
                                         <input type="text" id="vat" class="md-input md-input-width-medium"
-                                            value="{{ $bill->total_tax*100/($bill->amount - $bill->total_tax) }}" oninput="calculateActualAmount(0)" />
+                                            value="{{ $bill->total_tax*100/(($bill->amount - $bill->total_tax) == 0 ? 1 : $bill->amount - $bill->total_tax) }}" oninput="calculateActualAmount(0)" />
                                     </td>
                                     <td style="text-align: right">
                                         <a style="border: none;text-decoration: none;color: black"

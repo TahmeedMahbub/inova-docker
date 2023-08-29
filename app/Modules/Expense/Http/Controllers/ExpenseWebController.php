@@ -151,11 +151,11 @@ class ExpenseWebController extends Controller
                                         ->selectRaw('contact.*')
                                         ->get();
         }
-
+        $projects           = Contact::where('contact_category_id', 10)->get();
         $accounts           = Account::wherein('account_type_id',array(17,19))->get();
         $paid_throughs      = Account::wherein('account_type_id', array(4, 5))->get();
 
-        return view('expense::expense.create', compact('customers', 'accounts', 'paid_throughs'));
+        return view('expense::expense.create', compact('customers', 'accounts', 'paid_throughs', 'projects'));
     }
 
     public function store(Request $request)
@@ -215,6 +215,7 @@ class ExpenseWebController extends Controller
         $expense->issue_date        = date("Y-m-d", strtotime($data['issue_date']));
         $expense->tax_total         = round($total_tax, 2);
         $expense->reference         = $data['reference'];
+        $expense->project_contact_id= $data['project_contact_id'];
         $expense->note              = $data['customer_note'];
         $expense->account_id        = $data['account_id'];
         $expense->vendor_id         = $data['customer_id'];
@@ -363,8 +364,10 @@ class ExpenseWebController extends Controller
             $available_cheque_numbers = array_diff($page_numbers, $used_cheque_numbers);
             $cheque_numbers = array_merge([$expense->cheque_number], $available_cheque_numbers);
         }
+        $cheque_numbers = $cheque_numbers ?? [];
+        $projects           = Contact::where('contact_category_id', 10)->get();
 
-        return view('expense::expense.edit', compact('customers', 'accounts', 'paid_throughs','expense', 'cheque_numbers'));
+        return view('expense::expense.edit', compact('customers', 'accounts', 'paid_throughs','expense', 'cheque_numbers', 'projects'));
     }
 
     public function update(Request $request, $id)
@@ -412,6 +415,7 @@ class ExpenseWebController extends Controller
         $expense->issue_date        = date("Y-m-d", strtotime($data['issue_date']));
         $expense->tax_total         = round($total_tax, 2);
         $expense->reference         = $data['reference'];
+        $expense->project_contact_id= $data['project_contact_id'] ?? null;
         $expense->note              = $data['customer_note'];
         $expense->account_id        = $data['account_id'];
         $expense->vendor_id         = $data['customer_id'];

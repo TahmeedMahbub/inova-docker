@@ -189,6 +189,7 @@
                                         <th>Bill</th>
                                         <th>Order Number</th>
                                         <th>Vendor Name</th>
+                                        <th>Project</th>
                                         <th>Amount</th>
                                         <th>Balance Due</th>
                                          @if(Auth::user()->branch_id == 1)
@@ -205,6 +206,7 @@
                                         <th>Bill</th>
                                         <th>Oredr Number</th>
                                         <th>Vendor Name</th>
+                                        <th>Project</th>
                                         <th>Amount</th>
                                         <th>Balance Due</th>
                                         @if(Auth::user()->branch_id == 1)
@@ -223,6 +225,7 @@
                                             <td>BILL-{{ $bill->bill_number }}</td>
                                             <td>{{ $bill->order_number }}</td>
                                             <td>{{ $bill->customer->display_name }}</td>
+                                            <td>{{ $bill->projectContact ? $bill->projectContact->display_name : '' }}</td>
                                             <td>{{ $bill->amount }}</td>
                                             <td>{{ $bill->due_amount }}</td>
                                             @if(Auth::user()->branch_id == 1)

@@ -89,7 +89,7 @@ input{
                                 </div>
 
                                 <div class="uk-grid" data-uk-grid-margin>
-                                    <div class="uk-width-medium-1-3">
+                                    <div class="uk-width-medium-1-4">
                                       <label class="uk-vertical-align-middle" for="customer_name">Select Tax</label> <br>
                                         <select id="tax_id"
                                                 class="tax_id md-input select2-single-search-dropdown"
@@ -100,7 +100,7 @@ input{
                                         </select>
                                         <!-- Tax Amount = @{{ total_tax | number : 2}} BDT -->
                                     </div>
-                                    <div class="uk-width-medium-1-3">
+                                    <div class="uk-width-medium-1-4">
                                       <label class="uk-vertical-align-middle" for="customer_name">Amount Is</label> <br>
                                         <select
                                                 id="amount_is"
@@ -111,7 +111,18 @@ input{
                                                 required>
                                         </select>
                                     </div>
-                                    <div class="uk-width-medium-1-3">
+                                    <div class="uk-width-medium-1-4">
+                                        <label class="uk-vertical-align-middle" for="project_id">Project</label> <br>
+                                        <select id="project_id"
+                                            class="project_contact_id md-input select2-single-search-dropdown"
+                                            name="project_contact_id">
+                                            <option value="">Select Project</option>
+                                            @foreach ($projects as $project)
+                                                <option value="{{$project->id}}" {{$project->id == $expense->project_contact_id ? "selected" : '' }}>{{$project->display_name}}</option>                                                
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="uk-width-medium-1-4">
                                       <label class="uk-vertical-align-middle" for="deposite_to">Paid Through</label> <br>
                                         <select
                                                 id="paid_through_id"
